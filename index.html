@@ -8,42 +8,29 @@
     <title>Calculadora</title>
 </head>
 <body>
-    <div class="fundo">
-        <div class="calculadora">
-            <h1>Calculadora</h1>
-            <p id="resultado"></p>
-            <table>
-                <tr>
-                    <td><button class="botao">C</button></td>
-                    <td><button class="botao"> < </button></td>
-                    <td><button class="botao">/</button></td>
-                    <td><button class="botao">X</button></td>
-                </tr>
-                <tr>
-                    <td><button class="botaonum">7</button></td>
-                    <td><button class="botaonum">8</button></td>
-                    <td><button class="botaonum">9</button></td>
-                    <td><button class="botao">-</button></td>
-                </tr>
-                <tr>
-                    <td><button class="botaonum">4</button></td>
-                    <td><button class="botaonum">5</button></td>
-                    <td><button class="botaonum">6</button></td>
-                    <td><button class="botao">+</button></td>
-                </tr>
-                <tr>
-                    <td><button class="botaonum">1</button></td>
-                    <td><button class="botaonum">2</button></td>
-                    <td><button class="botaonum">3</button></td>
-                    <td rowspan="2"><button class="igual">=</button></td>
-                </tr>
-                <tr>
-                    <td colspan="2"><button class="zero">0</button></td>
-                    <td><button class="botaonum">.</button></td>
-                </tr>
-            </table>
+    <div class="calculadora">
+        <input type="text" disabled id="display">
+            <div class="buttons">
+                <button onclick="clean()">C</button>
+                <button onclick="back()">&lt;</button>
+                <button onclick="insertToDisplay('/')">/</button>
+                <button onclick="insertToDisplay('*')">*</button>
+                <button onclick="insertToDisplay('7')">7</button>
+                <button onclick="insertToDisplay('8')">8</button>
+                <button onclick="insertToDisplay('9')">9</button> 
+                <button onclick="insertToDisplay('-')">-</button>
+                <button onclick="insertToDisplay('4')">4</button>
+                <button onclick="insertToDisplay('5')">5</button>
+                <button onclick="insertToDisplay('6')">6</button>
+                <button onclick="insertToDisplay('+')">+</button>
+                <button onclick="insertToDisplay('1')">1</button>
+                <button onclick="insertToDisplay('2')">2</button>
+                <button onclick="insertToDisplay('3')">3</button>
+                <button class="zero" onclick="insertToDisplay('0')">0</button>
+                <button onclick="insertToDisplay('.')">.</button>
+                <button class="igual" onclick="result()">=</button>
+            </div>
         </div>
-    </div>
     <script src="jscript.js"></script>
 </body>
 </html>
